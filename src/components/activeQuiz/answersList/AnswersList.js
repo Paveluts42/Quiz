@@ -9,6 +9,7 @@ const AnswersList = (props) => (
                 answer={answer}
                 key={id}
                 onAnswerClick={props.onAnswerClick}
+                state={props.state ? props.state[answer.id] : null}
             />
 
         })}
