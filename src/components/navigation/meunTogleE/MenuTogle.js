@@ -14,7 +14,7 @@ const MenuTogle = (props) => {
     }
     return (
         <i className={cls.join(" ")}
-            onClick={props.onToggle} />
+           onClick={props.onToggle}/>
     )
 }
 

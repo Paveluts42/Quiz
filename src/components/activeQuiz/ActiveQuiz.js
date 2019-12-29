@@ -5,18 +5,18 @@ import AnswersList from "./answersList/AnswersList"
 const ActiveQuiz = props => {
 
     return (<div className={classes.ActiveQuiz}>
-        <p className={classes.Question}>
+            <p className={classes.Question}>
             <span>
                 <strong> {props.answerNumber} </strong>
                 {props.question}
             </span>
-            <small>{props.answerNumber} из {props.quizLength}</small>
-        </p>
-        <AnswersList
-            state={props.state}
-            onAnswerClick={props.onAnswerClick}
-            answers={props.answers} />
-    </div>
+                <small>{props.answerNumber} из {props.quizLength}</small>
+            </p>
+            <AnswersList
+                state={props.state}
+                onAnswerClick={props.onAnswerClick}
+                answers={props.answers}/>
+        </div>
 
     )
 }

@@ -4,22 +4,22 @@ import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 import {BrowserRouter} from "react-router-dom"
-import {compose, createStore,applyMiddleware} from "redux"
+import {applyMiddleware, compose, createStore} from "redux"
 import {Provider} from "react-redux"
 import rootReducers from "./store/reducers/rootReducers"
 import thunk from "redux-thunk"
+
 const composeEnhancers =
     typeof window === 'object' &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-        }) : compose;
-const store=createStore(rootReducers,composeEnhancers(applyMiddleware(thunk)))
+        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
+const store = createStore(rootReducers, composeEnhancers(applyMiddleware(thunk)))
 
-const app=(
+const app = (
     <Provider store={store}>
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
     </Provider>
 
 )
