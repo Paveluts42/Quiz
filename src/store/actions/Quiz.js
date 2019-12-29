@@ -1,6 +1,5 @@
 import axios from "../../axios/axios-quiz"
 import {
-    DELITEQUIEZ,
     FETCHQUIZESERROR,
     FETCHQUIZESSTART,
     FETCHQUIZESSUCCESS,
@@ -32,12 +31,7 @@ export function fetchQuizes() {
     }
 
 }
-export function deliteQuiez(item) {
-return{
-    type:DELITEQUIEZ,
-    item
-}
-}
+
 
 export function fetchQuizesStart() {
     return {

@@ -6,12 +6,14 @@ const AnswerItem = (props) => {
     if (props.state) {
         cls.push(classes[props.state])
     }
-    return (<li className={cls.join(" ")}
+    return (
+        <li className={cls.join(" ")}
                 onClick={() => {
                     props.onAnswerClick(props.answer.id)
                 }}>
         {props.answer.text}
-    </li>)
+    </li>
+    )
 }
 
 export default AnswerItem

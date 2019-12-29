@@ -1,5 +1,4 @@
 import {
-    DELITEQUIEZ,
     FETCHQUIZESERROR,
     FETCHQUIZESSTART,
     FETCHQUIZESSUCCESS,
@@ -58,10 +57,7 @@ export default function quizReducer(state = initialState, action) {
                 isFinished: false,
                 results: {},
             }
-        case DELITEQUIEZ:
-            return {
-                ...state,quiz: action.quiz
-            }
+
         default:
             return state
 

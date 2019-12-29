@@ -3,7 +3,7 @@ import classes from "./QuizList.module.css"
 import {NavLink} from "react-router-dom"
 import Loader from "../../components/ui/loader/Loader"
 import {connect} from "react-redux"
-import {deliteQuiez, fetchQuizes} from "../../store/actions/Quiz"
+import { fetchQuizes} from "../../store/actions/Quiz"
 
 class QuizList extends Component{
 
@@ -18,7 +18,6 @@ class QuizList extends Component{
     {quiz.name}
 
 </NavLink>
-
                 </li>
 
             )
@@ -28,7 +27,6 @@ class QuizList extends Component{
 
  componentDidMount() {
         this.props.fetchQuizes()
-     console.log(this)
     }
 
     render() {
@@ -60,7 +58,6 @@ return{
 function mapDispatchToProps(dispatch) {
 return{
     fetchQuizes:()=>dispatch(fetchQuizes()),
-    deliteQuiez:()=>dispatch(deliteQuiez())
 }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(QuizList)
